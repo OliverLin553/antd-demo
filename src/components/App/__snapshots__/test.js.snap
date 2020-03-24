@@ -4,9 +4,7 @@ exports[`UI test #home shoule have title 1`] = `
 <div
   className="App"
 >
-  <header
-    className="App-header"
-  >
+  <Layout>
     <img
       alt="logo"
       className="App-logo"
@@ -27,7 +25,16 @@ exports[`UI test #home shoule have title 1`] = `
     >
       Learn React
     </a>
-  </header>
-  <Footer />
+    <Button
+      block={false}
+      ghost={false}
+      htmlType="button"
+      loading={false}
+      type="primary"
+    >
+      Button
+    </Button>
+    <Footer />
+  </Layout>
 </div>
 `;

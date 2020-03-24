@@ -1,11 +1,13 @@
 import React from 'react';
-import Footer from './components/Footer'
-import './App.css';
+import { Button } from 'antd';
+import Layout from '../Layout'
+import Footer from '../Footer'
+import './style.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <Layout>
         <img src="https://create-react-app.dev/img/logo.svg" className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -18,8 +20,9 @@ function App() {
         >
           Learn React
         </a>
-      </header>
-      <Footer />
+        <Button type="primary">Button</Button>
+        <Footer />
+      </Layout>
     </div>
   );
 }

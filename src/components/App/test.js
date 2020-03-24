@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import App from './App';
+import App from './';
 
 describe('UI test #home', () => {
   it('shoule have title', () => {
