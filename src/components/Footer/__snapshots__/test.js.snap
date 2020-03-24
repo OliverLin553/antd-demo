@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Footer> it renders the expected tree 1`] = `
+<div
+  className="App"
+>
+  123
+</div>
+`;

@@ -15,7 +15,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "jest",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "test.coverage": "yarn run test --coverage",
+    "open.coverage": "open ./coverage/lcov-report/index.html"
   },
   "homepage": ".",
   "eslintConfig": {
