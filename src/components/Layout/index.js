@@ -1,9 +1,9 @@
 import React from 'react';
-import './style.css';
+import styles from './style.module.css';
 
 function Layout({ children }) {
   return (
-    <header className="App-header">
+    <header className={styles["app-header"]}>
       {children}
     </header>
   );

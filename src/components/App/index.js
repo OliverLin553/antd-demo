@@ -1,19 +1,23 @@
 import React from 'react';
 import { Button } from 'antd';
-import Layout from '../Layout'
+import Layout from '../Layout';
+import Header from "../Header";
+import Table from '../Table';
 import Footer from '../Footer'
 import './style.css';
+import styles from './style.module.css';
 
 function App() {
   return (
-    <div className="App">
+    <div className={styles.app}>
       <Layout>
-        <img src="https://create-react-app.dev/img/logo.svg" className="App-logo" alt="logo" />
+        <Header />
+        <img src="https://create-react-app.dev/img/logo.svg" className={styles["app-logo"]} alt="logo"/>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
         <a
-          className="App-link"
+          className={styles["app-link"]}
           href="https://reactjs.org"
           target="_blank"
           rel="noopener noreferrer"
@@ -21,7 +25,9 @@ function App() {
           Learn React
         </a>
         <Button type="primary">Button</Button>
-        <Footer />
+
+        <Table />
+        <Footer/>
       </Layout>
     </div>
   );
