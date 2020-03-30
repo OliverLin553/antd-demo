@@ -1,0 +1,25 @@
+.Header {
+  box-shadow: 0 2px 8px #f0f1f2;
+}
+
+.Container {
+  max-width: 1280px;
+  height: 80px;
+  line-height: 80px;
+  font-size: 20px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.Logo {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.Menu a:last-child {
+  margin-right: 20px;
+}
+
+.Menu a {
+  margin-right: 100px;
+}
