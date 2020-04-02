@@ -1,7 +1,9 @@
 import * as posts from "./posts"
+import * as resources from "./resources"
 
 const Actions = {
-  posts
+  posts,
+  resources
 }
 
 export default Actions

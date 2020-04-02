@@ -21,6 +21,8 @@
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
+    "lint": "./node_modules/react-scripts/node_modules/.bin/eslint src",
+    "lintf": "./node_modules/react-scripts/node_modules/.bin/eslint --fix",
     "test.coverage": "yarn run test --coverage",
     "open.coverage": "open ./coverage/lcov-report/index.html"
   },

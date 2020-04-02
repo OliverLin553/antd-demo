@@ -83,10 +83,8 @@ for (let i = 0; i < 100; i++) {
   });
 }
 
-function TableC() {
+export default function TableC() {
   return(
     <Table columns={columns} dataSource={data} onChange={onChange} />
   )
 }
-
-export default TableC;

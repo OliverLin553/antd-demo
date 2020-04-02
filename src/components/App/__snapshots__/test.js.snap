@@ -1,40 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`UI test #home shoule have title 1`] = `
-<div
-  className="App"
->
+exports[`<App /> it renders the expected tree 1`] = `
+<div>
+  <Header />
   <Layout>
-    <img
-      alt="logo"
-      className="App-logo"
-      src="https://create-react-app.dev/img/logo.svg"
-    />
-    <p>
-      Edit 
-      <code>
-        src/App.js
-      </code>
-       and save to reload.
-    </p>
-    <a
-      className="App-link"
-      href="https://reactjs.org"
-      rel="noopener noreferrer"
-      target="_blank"
-    >
-      Learn React
-    </a>
-    <Button
-      block={false}
-      ghost={false}
-      htmlType="button"
-      loading={false}
-      type="primary"
-    >
-      Button
-    </Button>
-    <Footer />
+    children
   </Layout>
+  <Footer />
 </div>
 `;

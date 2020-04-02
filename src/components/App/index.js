@@ -7,11 +7,11 @@ import Footer from '../Footer'
 import './style.css';
 import { connect } from "react-redux";
 
-class App extends React.Component {
+export class App extends React.Component {
   componentDidMount() {
     const { actions } = this.props;
 
-    actions.posts.fetch()
+    actions.resources.fetch()
   }
 
   render() {
@@ -31,7 +31,7 @@ class App extends React.Component {
 
 const mapDispatchToProps = dispatch => ({
   actions: {
-    posts: bindActionCreators(Actions.posts, dispatch)
+    resources: bindActionCreators(Actions.resources, dispatch)
   }
 })
 

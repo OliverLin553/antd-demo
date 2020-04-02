@@ -2,8 +2,14 @@
 
 exports[`<Footer> it renders the expected tree 1`] = `
 <div
-  className="App"
+  className="Footer"
 >
-  123
+  <div
+    className="Container"
+  >
+    ©2019-
+    2020
+     Olin.
+  </div>
 </div>
 `;

@@ -1,20 +1,26 @@
-import React from 'react';
-import { connect } from 'react-redux'
-import { bindActionCreators } from 'redux'
+import React, { Fragment } from 'react';
+import { connect } from 'react-redux';
 
-import Actions from "../../actions"
+import PostItem from './PostItem';
+
 import styles from "./style.module.css";
 
-class DashboardPage extends React.Component {
+export class DashboardPage extends React.Component {
+  renderTitle() {
+    const { posts } = this.props;
+
+    return posts.map(post => ( <PostItem key={post.id} post={post} /> ));
+  }
+
   render() {
-    console.log(this.props.posts)
     return (
-      <div>
+      <Fragment>
         <img src="https://create-react-app.dev/img/logo.svg" className={styles["app-logo"]} alt="logo"/>
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-      </div>
+        {this.renderTitle()}
+      </Fragment>
     );
   }
 }
@@ -23,10 +29,4 @@ export const mapStateToProps = state => ({
   posts: state.posts,
 });
 
-export const mapDispatchToProps = dispatch => ({
-  actions: {
-    posts: bindActionCreators(Actions.posts, dispatch)
-  }
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(DashboardPage)
+export default connect(mapStateToProps, null)(DashboardPage)
