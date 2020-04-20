@@ -2,6 +2,6 @@
 
 exports[`<Layout> it renders the expected tree 1`] = `
 <header
-  className="App-header"
+  className="app-header"
 />
 `;
