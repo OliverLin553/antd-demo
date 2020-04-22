@@ -1,0 +1,12 @@
+.wrapper.footer-list-wrapper-border {
+  padding-top: 30px;
+  border-top: 1px solid #e7e7e7;
+  color: #222;
+}
+
+.footer-title {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}

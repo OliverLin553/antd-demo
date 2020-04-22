@@ -3,7 +3,9 @@ import { bindActionCreators } from "redux"
 import Actions from '../../actions'
 import Layout from '../Layout';
 import Header from "../Header";
-import Footer from '../Footer'
+import FooterDemo1 from "../FooterDemo1";
+import FooterDemo from "../FooterDemo";
+// import Footer from '../Footer'
 import './style.css';
 import { connect } from "react-redux";
 
@@ -23,7 +25,8 @@ export class App extends React.Component {
         <Layout>
           {children}
         </Layout>
-        <Footer/>
+        <FooterDemo1 />
+        <FooterDemo />
       </div>
     );
   }
