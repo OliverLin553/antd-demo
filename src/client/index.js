@@ -14,3 +14,7 @@ export const fetchPosts = () => axios.get(`${apiUrl}/posts`, {
 export const updatePost = (id, data) => axios.put(`${apiUrl}/posts/${id}`, data,{
   headers: headersInfo()
 });
+
+export const createPost = (data) => axios.post(`${apiUrl}/posts`, data,{
+  headers: headersInfo()
+});

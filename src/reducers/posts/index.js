@@ -10,8 +10,11 @@ export default (state = [], action) => {
       return state.map(post => post.id === action.payload.id ? { ...post, title: action.payload.title } : post)
     }
 
-    default: {
-      return state
+    case constants.POST_CREATE: {
+      return [...state, action.payload]
     }
+
+    default:
+      return state
   }
 }

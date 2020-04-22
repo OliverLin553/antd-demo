@@ -1,8 +1,9 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from "redux";
 
 import Actions from '../../../actions';
+import styles from "./style.module.css";
 
 export class PostItem extends React.Component {
   constructor(props) {
@@ -32,7 +33,9 @@ export class PostItem extends React.Component {
     const { actions, post } = this.props;
     const { edit, title } = this.state;
 
-    actions.posts.updatePost(post.id, { title });
+    if(post.title !== title) {
+      actions.posts.updatePost(post.id, { title });
+    }
 
     this.setState({ edit: !edit });
   }
@@ -41,7 +44,12 @@ export class PostItem extends React.Component {
     const { title } = this.state;
 
     return (
-      <div onClick={() => { this.handleClick() }}>{title}</div>
+      <div
+        onClick={() => { this.handleClick() }}
+        className={styles.Title}
+      >
+        {title}
+      </div>
     )
   }
 
@@ -53,6 +61,7 @@ export class PostItem extends React.Component {
         value={title}
         name="title"
         autoFocus="autofocus"
+        className={styles.Input}
         onChange={(event) => { this.handleChange(event) }}
         onBlur={() => { this.handleBlur() }}
       />
@@ -63,10 +72,10 @@ export class PostItem extends React.Component {
     const { edit } = this.state;
 
     return (
-      <Fragment>
+      <div className={styles.Container}>
         {!edit && this.renderDefault()}
         {edit && this.renderEdit()}
-      </Fragment>
+      </div>
     );
   }
 }
